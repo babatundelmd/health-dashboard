@@ -1,0 +1,207 @@
+.diagnosis-history-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.card-title {
+  font-weight: 800px;
+  font-size: 24px;
+  color: #072635;
+  margin: 0 0 32px 0;
+}
+
+.chart-section {
+  background: #f4f0fe 0% 0% no-repeat padding-box;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #072635;
+  margin: 0;
+}
+
+.period-select {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #cbc8d4;
+  background: #ffffff;
+  font-size: 14px;
+  color: #072635;
+  cursor: pointer;
+}
+
+.chart-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 24px;
+  width: 650px;
+  height: 298px;
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 298px;
+  width: 100%;
+}
+
+canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.blood-pressure-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.bp-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+}
+
+.indicator-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.indicator-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.systolic .indicator-dot {
+  background: #e66fd2;
+}
+
+.diastolic .indicator-dot {
+  background: #8c6fe6;
+}
+
+.indicator-label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #072635;
+}
+
+.indicator-value {
+  font-weight: bold;
+  font-size: 22px;
+  color: #072635;
+}
+
+.indicator-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #072635;
+}
+
+.indicator-status svg {
+  color: currentColor;
+}
+
+.indicator-status.lower {
+  color: #072635;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ededed;
+  margin: 0;
+}
+
+.vitals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.vital-card {
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vital-card.respiratory {
+  background: #e0f3fa 0% 0% no-repeat padding-box;
+}
+
+.vital-card.temperature {
+  background: #ffe6e9;
+}
+
+.vital-card.heart-rate {
+  background: #ffe6f1;
+}
+
+.vital-icon {
+  display: flex;
+  align-items: start;
+}
+
+.vital-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.vital-label {
+  font-size: 16px;
+  color: #072635;
+}
+
+.vital-value {
+  font-weight: bold;
+  font-size: 30px;
+  color: #072635;
+}
+
+.vital-status {
+  font-size: 14px;
+  color: #072635;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 1200px) {
+  .chart-container {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-wrapper {
+    height: 250px;
+  }
+
+  .blood-pressure-info {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .vitals-grid {
+    grid-template-columns: 1fr;
+  }
+}

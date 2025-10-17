@@ -1,0 +1,30 @@
+    <div class="app-container">
+
+        @if (isLoading()) {
+        <app-loader />
+      }
+      <app-header />
+
+      <div class="main-content">
+        <aside class="sidebar">
+          <app-patient-list
+            [patients]="patients()"
+            [selectedPatient]="selectedPatient()"
+            (patientSelected)="onPatientSelected($event)" />
+        </aside>
+
+        <main class="content-area">
+          @if (selectedPatient()) {
+            <app-diagnosis-history [patient]="selectedPatient()!" />
+            <app-diagnostic-list [diagnosticList]="selectedPatient()!.diagnostic_list" />
+          }
+        </main>
+
+        <aside class="details-sidebar">
+          @if (selectedPatient()) {
+            <app-patient-details [patient]="selectedPatient()!" />
+            <app-lab-results [labResults]="selectedPatient()!.lab_results" />
+          }
+        </aside>
+      </div>
+    </div>

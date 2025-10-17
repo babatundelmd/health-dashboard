@@ -1,0 +1,69 @@
+ .lab-results-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .card-title {
+      font-weight: 800;
+      font-size: 24px;
+      color: #072635;
+      margin: 0 0 24px 0;
+    }
+
+    .lab-results-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .lab-result-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 16px;
+    }
+
+    .lab-result-item:not(:last-child) {
+      border-bottom: 1px solid #ededed;
+    }
+
+    .test-name {
+      font-size: 14px;
+      color: #072635;
+      flex: 1;
+    }
+
+    .download-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      color: #072635;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .download-btn:hover {
+      opacity: 0.7;
+      transform: translateY(2px);
+    }
+
+    .lab-results-list::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .lab-results-list::-webkit-scrollbar-track {
+      background: #f6f6f6;
+      border-radius: 3px;
+    }
+
+    .lab-results-list::-webkit-scrollbar-thumb {
+      background: #cbc8d4;
+      border-radius: 3px;
+    }

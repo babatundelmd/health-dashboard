@@ -1,0 +1,158 @@
+<div class="diagnosis-history-card">
+  <h2 class="card-title">Diagnosis History</h2>
+
+  <div class="chart-section">
+    <div class="chart-container">
+      <div class="chart-wrapper">
+        <canvas #chartCanvas></canvas>
+      </div>
+
+      <div class="blood-pressure-info">
+        <div class="bp-indicator systolic">
+          <div class="indicator-header">
+            <span class="indicator-dot"></span>
+            <span class="indicator-label">Systolic</span>
+          </div>
+          <div class="indicator-value">{{ latestSystolic() }}</div>
+          <div class="indicator-status">
+            <svg width="10" height="5" viewBox="0 0 10 5">
+              <path d="M5 0L10 5H0L5 0Z" fill="currentColor" />
+            </svg>
+            Higher than Average
+          </div>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="bp-indicator diastolic">
+          <div class="indicator-header">
+            <span class="indicator-dot"></span>
+            <span class="indicator-label">Diastolic</span>
+          </div>
+          <div class="indicator-value">{{ latestDiastolic() }}</div>
+          <div class="indicator-status lower">
+            <svg width="10" height="5" viewBox="0 0 10 5">
+              <path d="M0 0H10L5 5L0 0Z" fill="currentColor" />
+            </svg>
+            Lower than Average
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="vitals-grid">
+    <div class="vital-card respiratory">
+      <div class="vital-icon">
+        <svg
+          width="96"
+          height="96"
+          viewBox="0 0 96 96"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="48" cy="48" r="48" fill="#E0F3FA" />
+          <g transform="translate(21.311 19.75)">
+            <path
+              d="M20.783,56.5L6.826,56.468a8.013,8.013,0,0,1-5.191-3.652c-2.027-3.294-2.17-8.5-.427-15.474,4.17-16.681,10.165-22.955,12.549-24.878a8.794,8.794,0,0,1,6.385-2.231l-.367,2.473.184-1.236-.168,1.238a6.431,6.431,0,0,0-4.465,1.7C13.138,16.175,7.62,22,3.634,37.947c-1.552,6.209-1.507,10.9.13,13.56A5.474,5.474,0,0,0,7.248,54H20.783a2.149,2.149,0,0,0,2.146-2.146V29.931h2.5V51.853A4.651,4.651,0,0,1,20.783,56.5"
+              fill="#072635"
+            />
+            <path
+              d="M46.415,56.5H32.6a4.651,4.651,0,0,1-4.646-4.646V29.931h2.5V51.853A2.149,2.149,0,0,0,32.6,54H46.13a5.472,5.472,0,0,0,3.483-2.492c1.638-2.661,1.684-7.35.131-13.56C45.758,22,40.239,16.175,38.051,14.41a6.479,6.479,0,0,0-4.449-1.7l-.367-2.473a8.805,8.805,0,0,1,6.386,2.231c2.384,1.923,8.379,8.2,12.549,24.878,1.743,6.974,1.6,12.181-.427,15.474a8.015,8.015,0,0,1-5.191,3.652Z"
+              fill="#072635"
+            />
+            <path
+              d="M21.739,16.348v33.9a2.476,2.476,0,0,1-2.477,2.476H8.487s-6.066.22-4.55-9.538,7.648-24.526,11.934-26.834,5.538-.659,5.868,0"
+              fill="#74CEF5"
+            />
+            <path
+              d="M31.644,16.348v33.9a2.476,2.476,0,0,0,2.477,2.476H44.9s6.066.22,4.55-9.538S41.8,18.656,37.512,16.348s-5.538-.659-5.868,0"
+              fill="#74CEF5"
+            />
+          </g>
+        </svg>
+      </div>
+      <div class="vital-info">
+        <div class="vital-label">Respiratory Rate</div>
+        <div class="vital-value">{{ latestRespiratoryRate() }} bpm</div>
+        <div class="vital-status">{{ respiratoryStatus() }}</div>
+      </div>
+    </div>
+
+    <div class="vital-card temperature">
+      <div class="vital-icon">
+        <svg
+          width="96"
+          height="96"
+          viewBox="0 0 96 96"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="48" cy="48" r="48" fill="#FFE6E9" />
+          <g transform="translate(32 20)">
+            <path
+              d="M13.707,56A13.706,13.706,0,0,1,7.474,30.086V0H19.941V30.086A13.706,13.706,0,0,1,13.707,56M9.474,2V31.359l-.588.266a11.708,11.708,0,1,0,9.643,0l-.588-.266V2Z"
+              fill="#072635"
+            />
+            <rect
+              width="5.025"
+              height="44.411"
+              transform="translate(11.195 3.921)"
+              fill="#E66FD2"
+            />
+            <path d="M23.3,42.529a9.6,9.6,0,1,1-9.6-9.6,9.6,9.6,0,0,1,9.6,9.6" fill="#E66FD2" />
+            <rect width="6.471" height="2" transform="translate(23.161 0.118)" fill="#072635" />
+            <rect width="8.471" height="2" transform="translate(23.161 5.365)" fill="#072635" />
+            <rect width="6.471" height="2" transform="translate(23.161 26.353)" fill="#072635" />
+            <rect width="6.471" height="2" transform="translate(23.161 10.612)" fill="#072635" />
+            <rect width="6.471" height="2" transform="translate(23.161 21.106)" fill="#072635" />
+            <rect width="8.471" height="2" transform="translate(23.161 15.859)" fill="#072635" />
+          </g>
+        </svg>
+      </div>
+      <div class="vital-info">
+        <div class="vital-label">Temperature</div>
+        <div class="vital-value">{{ latestTemperature() }}°F</div>
+        <div class="vital-status">{{ temperatureStatus() }}</div>
+      </div>
+    </div>
+
+    <div class="vital-card heart-rate">
+      <div class="vital-icon">
+        <svg
+          width="96"
+          height="96"
+          viewBox="0 0 96 96"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="48" cy="48" r="48" fill="#FFE6F1" />
+          <g transform="translate(18.145 24.001)">
+            <path
+              d="M29.855,54,4.951,29.092a16.948,16.948,0,0,1-1.185-1.314l2.01-1.632a14.236,14.236,0,0,0,1,1.112L29.854,50.333,52.926,27.258a14.317,14.317,0,0,0,0-20.247l-.233-.235a14.318,14.318,0,0,0-20.248,0l-2.6,2.6-2.59-2.6A14.337,14.337,0,0,0,7,6.776l-.229.23a14.226,14.226,0,0,0-4.19,10.127H0A16.8,16.8,0,0,1,4.951,5.181l.23-.229a16.925,16.925,0,0,1,23.914,0l.761.761.761-.761a16.906,16.906,0,0,1,23.909,0h0l.233.234a16.906,16.906,0,0,1,0,23.908Z"
+              fill="#072635"
+            />
+            <path
+              d="M8.763,25.277A11.53,11.53,0,0,1,8.763,9l.227-.226a11.513,11.513,0,0,1,16.282,0h0l4.573,4.582,4.582-4.585a11.513,11.513,0,0,1,16.282,0l.212.214a11.509,11.509,0,0,1,.038,16.276l-.021.022L29.855,46.368Z"
+              fill="#E66FD2"
+            />
+            <path
+              d="M20.131,30.786l-4.24-13.852-2.785,6.335L.028,23.161V20.573l11.389.108,4.91-11.17,4.466,14.594,2.241-4.154h17.6v2.588H24.578Z"
+              fill="#072635"
+            />
+          </g>
+        </svg>
+      </div>
+      <div class="vital-info">
+        <div class="vital-label">Heart Rate</div>
+        <div class="vital-value">{{ latestHeartRate() }} bpm</div>
+        <div class="vital-status lower">
+          <svg width="10" height="5" viewBox="0 0 10 5">
+            <path d="M0 0H10L5 5L0 0Z" fill="currentColor" />
+          </svg>
+          {{ heartRateStatus() }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

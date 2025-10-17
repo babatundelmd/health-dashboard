@@ -1,0 +1,17 @@
+ <div class="lab-results-card">
+      <h2 class="card-title">Lab Results</h2>
+
+      <div class="lab-results-list">
+        @for (result of labResults(); track result) {
+          <div class="lab-result-item">
+            <span class="test-name">{{ result }}</span>
+            <button class="download-btn" aria-label="Download result">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 3V13M10 13L6 9M10 13L14 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 15V16C3 16.5304 3.21071 17.0391 3.58579 17.4142C3.96086 17.7893 4.46957 18 5 18H15C15.5304 18 16.0391 17.7893 16.4142 17.4142C16.7893 17.0391 17 16.5304 17 16V15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+        }
+      </div>
+    </div>

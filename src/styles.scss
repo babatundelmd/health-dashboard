@@ -1,0 +1,72 @@
+:root {
+  --unnamed-line-spacing-19: 19px;
+  --unnamed-line-spacing-24: 24px;
+  --unnamed-line-spacing-33: 33px;
+  --unnamed-text-transform-titlecase: titlecase;
+}
+
+.card-title-24pt {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 0;
+  color: #072635;
+}
+
+.inner-card-title-18pt {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #072635;
+  text-transform: titlecase;
+}
+
+.body-emphasized-14pt {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0;
+  color: #072635;
+}
+
+.body-secondary-info-14pt {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0;
+  color: #707070;
+}
+
+.body-regular-14 {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0;
+  color: #072635;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: #f6f6f6;
+  color: #072635;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

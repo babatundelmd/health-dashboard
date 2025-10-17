@@ -1,0 +1,81 @@
+.patient-details-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.patient-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.patient-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.patient-name {
+  font-weight: 800px;
+  font-size: 24px;
+  color: #072635;
+  margin: 0;
+  text-align: center;
+}
+
+.patient-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.info-icon {
+  flex-shrink: 0;
+}
+
+.info-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-size: 14px;
+  color: #072635;
+}
+
+.info-value {
+  font-weight: bold;
+  font-size: 14px;
+  color: #072635;
+}
+
+.show-all-btn {
+  background: #01f0d0 0% 0% no-repeat padding-box;
+  border-radius: 41px;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #072635;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.show-all-btn:hover {
+  background: var(--activestate_bg_2);
+  transform: translateY(-1px);
+}

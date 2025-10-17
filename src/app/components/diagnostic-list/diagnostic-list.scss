@@ -1,0 +1,98 @@
+.diagnostic-list-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .card-title {
+      font-weight: 800px;
+      font-size: 24px;
+      color: #072635;
+      margin: 0 0 24px 0;
+    }
+
+    .table-container {
+      overflow-x: auto;
+    }
+
+    .diagnostic-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .diagnostic-table thead {
+      background: #f6f6f6;
+      border-radius: 24px;
+    }
+
+    .diagnostic-table th {
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: bold;
+      font-size: 14px;
+      color: #072635;
+    }
+
+    .diagnostic-table th:first-child {
+      border-radius: 24px 0 0 24px;
+    }
+
+    .diagnostic-table th:last-child {
+      border-radius: 0 24px 24px 0;
+    }
+
+    .diagnostic-table tbody tr {
+      border-bottom: 1px solid #ededed;
+    }
+
+    .diagnostic-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .diagnostic-table td {
+      padding: 16px;
+      font-size: 14px;
+      color: #072635;
+    }
+
+    .problem-name {
+      font-weight: bold;
+    }
+
+    .description {
+      color: #707070;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    .status-badge[data-status="under observation"] {
+      background: #FFF4E6;
+      color: #FF9800;
+    }
+
+    .status-badge[data-status="cured"] {
+      background: #E8F5E9;
+      color: #4CAF50;
+    }
+
+    .status-badge[data-status="inactive"] {
+      background: #F5F5F5;
+      color: #9E9E9E;
+    }
+
+    @media (max-width: 768px) {
+      .diagnostic-table {
+        font-size: 12px;
+      }
+
+      .diagnostic-table th,
+      .diagnostic-table td {
+        padding: 10px;
+      }
+    }

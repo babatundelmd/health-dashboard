@@ -1,0 +1,28 @@
+<div class="diagnostic-list-card">
+      <h2 class="card-title">Diagnostic List</h2>
+
+      <div class="table-container">
+        <table class="diagnostic-table">
+          <thead>
+            <tr>
+              <th>Problem/Diagnosis</th>
+              <th>Description</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (item of diagnosticList(); track item.name) {
+              <tr>
+                <td class="problem-name">{{ item.name }}</td>
+                <td class="description">{{ item.description }}</td>
+                <td>
+                  <span class="status-badge" [attr.data-status]="item.status.toLowerCase()">
+                    {{ item.status }}
+                  </span>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
