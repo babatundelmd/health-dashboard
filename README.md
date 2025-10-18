@@ -33,10 +33,7 @@ Build files will be in `dist/tech-care-dashboard/`
 - Chart.js for blood pressure visualization
 - Responsive design
 - API integration with Basic Auth
-
-## API
-
-- **Endpoint**: https://fedskillstest.coalitiontechnologies.workers.dev
+- InjectionToken
 
 ## Technologies
 
