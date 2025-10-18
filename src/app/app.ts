@@ -10,6 +10,7 @@ import { LabResults } from './components/lab-results/lab-results';
 import { DiagnosticList } from './components/diagnostic-list/diagnostic-list';
 import { PatientList } from './components/patient-list/patient-list';
 import { Loader } from './components/loader/loader';
+import { API_CONFIG } from './config/api.config';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +29,7 @@ import { Loader } from './components/loader/loader';
 })
 export class App implements OnInit {
   protected readonly title = signal('health-dashboard');
+  private apiConfig = inject(API_CONFIG);
   private http = inject(HttpClient);
 
   patients = signal<Patient[]>([]);
@@ -41,15 +43,13 @@ export class App implements OnInit {
   private loadPatients(): void {
     this.isLoading.set(true);
     this.http
-      .get<Patient[]>('https://fedskillstest.coalitiontechnologies.workers.dev', {
+      .get<Patient[]>(this.apiConfig.baseUrl, {
         headers: {
-          Authorization: 'Basic Y29hbGl0aW9uOnNraWxscy10ZXN0',
+          Authorization: this.apiConfig.authToken,
         },
       })
       .subscribe({
         next: (data) => {
-          console.log(data, 'data');
-
           this.patients.set(data);
           const jessicaTaylor = data.find((p) => p.name === 'Jessica Taylor');
           if (jessicaTaylor) {
