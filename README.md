@@ -2,7 +2,7 @@
 
 Angular 20 application for patient health management dashboard.
 
-<img width="1503" height="1303" alt="Image" src="https://github.com/user-attachments/assets/9953157d-d65d-403e-a16a-675ba76d71e0" />
+<img width="1487" height="1275" alt="Image" src="https://github.com/user-attachments/assets/0be42861-ec70-49da-8b38-1f4d60961f6e" />
 
 ## Installation
 
