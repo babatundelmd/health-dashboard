@@ -1,5 +1,11 @@
 <header class="header">
   <div class="header-content">
+    <button class="hamburger-btn" (click)="toggleMobileMenu()" aria-label="Toggle Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
     <div class="logo">
       <svg
         id="TestLogo"
@@ -131,7 +137,7 @@
       </svg>
     </div>
 
-    <nav class="nav">
+    <nav class="nav" [class.mobile-open]="mobileMenuOpen()">
       <a
         href="#"
         class="nav-item"

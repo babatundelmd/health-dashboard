@@ -108,3 +108,83 @@
   background: var(--unnamed-color-cbc8d4);
   border-radius: 3px;
 }
+
+// Tablet landscape
+@media (max-width: 1200px) {
+  .patient-list {
+    max-height: calc(100vh - 300px);
+  }
+}
+
+// Tablet portrait
+@media (max-width: 900px) {
+  .patient-list-container {
+    padding: 10px;
+    gap: 16px;
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .patient-list {
+    max-height: calc(100vh - 320px);
+  }
+}
+
+// Mobile landscape
+@media (max-width: 768px) {
+  .patient-list-container {
+    padding: 12px;
+  }
+
+  .patient-list {
+    max-height: 300px;
+  }
+
+  .patient-item {
+    padding: 12px 8px;
+  }
+
+  .patient-avatar {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+// Mobile portrait
+@media (max-width: 480px) {
+  .patient-list-container {
+    padding: 8px;
+    gap: 12px;
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .patient-list {
+    gap: 4px;
+    max-height: 250px;
+  }
+
+  .patient-item {
+    padding: 10px 6px;
+    gap: 8px;
+  }
+
+  .patient-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .patient-name {
+    font-size: 13px;
+  }
+
+  .patient-meta {
+    font-size: 12px;
+  }
+}

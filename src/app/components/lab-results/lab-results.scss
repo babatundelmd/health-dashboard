@@ -67,3 +67,107 @@
       background: #cbc8d4;
       border-radius: 3px;
     }
+
+    // Tablet landscape
+    @media (max-width: 1200px) {
+      .lab-results-card {
+        padding: 20px;
+      }
+
+      .card-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+
+      .lab-results-list {
+        max-height: 280px;
+      }
+    }
+
+    // Tablet portrait
+    @media (max-width: 900px) {
+      .lab-results-card {
+        padding: 16px;
+      }
+
+      .card-title {
+        font-size: 20px;
+      }
+
+      .lab-results-list {
+        max-height: 250px;
+      }
+
+      .lab-result-item {
+        padding: 14px 0;
+        gap: 12px;
+      }
+    }
+
+    // Mobile landscape
+    @media (max-width: 768px) {
+      .lab-results-card {
+        padding: 12px;
+      }
+
+      .card-title {
+        font-size: 18px;
+        margin-bottom: 16px;
+      }
+
+      .lab-results-list {
+        max-height: 220px;
+      }
+
+      .lab-result-item {
+        padding: 12px 0;
+      }
+
+      .test-name {
+        font-size: 13px;
+      }
+
+      .download-btn {
+        padding: 6px;
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    // Mobile portrait
+    @media (max-width: 480px) {
+      .lab-results-card {
+        padding: 10px;
+      }
+
+      .card-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+
+      .lab-results-list {
+        max-height: 200px;
+        gap: 0;
+      }
+
+      .lab-result-item {
+        padding: 10px 0;
+        gap: 8px;
+      }
+
+      .test-name {
+        font-size: 12px;
+      }
+
+      .download-btn {
+        padding: 4px;
+
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
