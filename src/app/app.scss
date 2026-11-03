@@ -9,6 +9,7 @@
   gap: 32px;
   padding: 32px;
   margin: 0 auto;
+  max-width: 1920px;
 }
 
 .sidebar {
@@ -16,35 +17,110 @@
   border-radius: 16px;
   height: fit-content;
   width: 367px;
+  flex-shrink: 0;
 }
 
 .content-area {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  flex: 1;
+  min-width: 0;
 }
 
 .details-sidebar {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  width: 367px;
+  flex-shrink: 0;
 }
 
+// Desktop - slightly smaller screens
 @media (max-width: 1440px) {
   .main-content {
-    display: flex;
     gap: 24px;
     padding: 24px;
   }
 }
 
-@media (max-width: 1024px) {
+// Tablet landscape - stack details sidebar below content
+@media (max-width: 1200px) {
   .main-content {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .sidebar {
+    width: 300px;
+  }
+
+  .content-area {
+    flex: 1;
+    min-width: 300px;
   }
 
   .details-sidebar {
-    grid-column: 1;
+    width: 100%;
+    flex-direction: row;
+    gap: 20px;
+
+    > * {
+      flex: 1;
+      min-width: 280px;
+    }
+  }
+}
+
+// Tablet portrait - sidebar becomes smaller
+@media (max-width: 900px) {
+  .main-content {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .sidebar {
+    width: 250px;
+  }
+
+  .details-sidebar {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+// Mobile landscape - stack everything
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-height: 400px;
+  }
+
+  .content-area {
+    width: 100%;
+  }
+
+  .details-sidebar {
+    width: 100%;
+    gap: 16px;
+  }
+}
+
+// Mobile portrait - smaller padding
+@media (max-width: 480px) {
+  .main-content {
+    padding: 8px;
+    gap: 12px;
+  }
+
+  .sidebar {
+    max-height: 300px;
   }
 }

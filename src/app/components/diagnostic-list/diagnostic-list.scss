@@ -86,13 +86,110 @@
       color: #9E9E9E;
     }
 
-    @media (max-width: 768px) {
-      .diagnostic-table {
-        font-size: 12px;
+    // Tablet landscape
+    @media (max-width: 1200px) {
+      .diagnostic-list-card {
+        padding: 20px;
+      }
+
+      .card-title {
+        font-size: 22px;
+        margin-bottom: 20px;
       }
 
       .diagnostic-table th,
       .diagnostic-table td {
+        padding: 12px 14px;
+        font-size: 13px;
+      }
+    }
+
+    // Tablet portrait
+    @media (max-width: 900px) {
+      .diagnostic-list-card {
+        padding: 16px;
+      }
+
+      .card-title {
+        font-size: 20px;
+      }
+
+      .diagnostic-table th,
+      .diagnostic-table td {
+        padding: 10px 12px;
+      }
+    }
+
+    // Mobile landscape
+    @media (max-width: 768px) {
+      .diagnostic-list-card {
+        padding: 12px;
+      }
+
+      .card-title {
+        font-size: 18px;
+        margin-bottom: 16px;
+      }
+
+      .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .diagnostic-table {
+        font-size: 12px;
+        min-width: 600px;
+      }
+
+      .diagnostic-table th,
+      .diagnostic-table td {
+        padding: 10px 8px;
+        white-space: nowrap;
+      }
+
+      .description {
+        max-width: 200px;
+        white-space: normal;
+      }
+
+      .status-badge {
+        padding: 4px 12px;
+        font-size: 12px;
+      }
+    }
+
+    // Mobile portrait
+    @media (max-width: 480px) {
+      .diagnostic-list-card {
         padding: 10px;
+      }
+
+      .card-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+
+      .diagnostic-table {
+        font-size: 11px;
+        min-width: 500px;
+      }
+
+      .diagnostic-table th,
+      .diagnostic-table td {
+        padding: 8px 6px;
+      }
+
+      .problem-name {
+        font-size: 12px;
+      }
+
+      .description {
+        max-width: 150px;
+        font-size: 11px;
+      }
+
+      .status-badge {
+        padding: 3px 10px;
+        font-size: 11px;
       }
     }

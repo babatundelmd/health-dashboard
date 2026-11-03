@@ -3,6 +3,22 @@
   --unnamed-line-spacing-24: 24px;
   --unnamed-line-spacing-33: 33px;
   --unnamed-text-transform-titlecase: titlecase;
+
+  // Color variables
+  --unnamed-color-072635: #072635;
+  --unnamed-color-01f0d0: #01f0d0;
+  --unnamed-color-f6f6f6: #f6f6f6;
+  --unnamed-color-ffffff: #ffffff;
+  --unnamed-color-707070: #707070;
+  --unnamed-color-cbc8d4: #cbc8d4;
+  --activestate_bg_2: #d8fcf7;
+
+  // Responsive breakpoints
+  --breakpoint-mobile: 480px;
+  --breakpoint-mobile-landscape: 768px;
+  --breakpoint-tablet: 900px;
+  --breakpoint-tablet-landscape: 1200px;
+  --breakpoint-desktop: 1440px;
 }
 
 .card-title-24pt {
